@@ -102,19 +102,24 @@
         const minHand = document.querySelector('.min-hand');
         const hourHand = document.querySelector('.hour-hand');
 
-        function setDate() {
-            const now = new Date();
+        const now = new Date();
+        const seconds = now.getSeconds();
+        let secondDegree = (seconds / 60 * 360) + 90;
 
-            const seconds = now.getSeconds();
-            const secondDegree = (seconds / 60 * 360) + 90;
+        const mins = now.getMinutes();
+        let minDegree = (mins / 60 * 360) + (seconds / 60 / 60 * 360) + 90;
+
+        const hours = now.getHours();
+        let hourDegree = (hours / 12 * 360) + (mins / 60 / 12 * 360) + 90;
+
+        function setDate() {
+            secondDegree += (1 / 60 * 360);
             secondHand.style.transform = `rotate(${secondDegree}deg) scaleY(0.5)`;
 
-            const mins = now.getMinutes();
-            const minDegree = (mins / 60 * 360) + 90;
+            minDegree += (1 / 60 / 60 * 360);
             minHand.style.transform = `rotate(${minDegree}deg)`;
 
-            const hours = now.getHours();
-            const hourDegree = (hours / 12 * 360) + 90;
+            hourDegree += (1 / 60 / 60 / 12 * 360);
             hourHand.style.transform = `rotate(${hourDegree}deg) scale(0.6,1.1)`;
         };
 
