@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scoped CSS Variables and JS</title>
+</head>
+
+<body>
+    <h2>Update CSS Variables with
+        <span class='hl'>JS</span>
+    </h2>
+
+    <div class="controls">
+        <label for="spacing">間隔:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">模糊:</label>
+        <input id="blur" type="range" name="blur" min="0" max="20" value="10" data-sizing="px">
+
+        <label for="grayscale">灰階:</label>
+        <input id="grayscale" type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+
+        <label for="sepia">懷舊:</label>
+        <input id="sepia" type="range" name="sepia" min="0" max="100" value="0" data-sizing="%">
+
+        <label for="base">底色:</label>
+        <input id="base" type="color" name="base" value="#ffc760">
+    </div>
+
+    <img src="LOVE.jpg">
+
+    <style>
+        /*
+            CSS變數
+        */
+
+        :root {
+            --spacing: 10px;
+            --blur: 10px;
+            --grayscale: 0;
+            --sepia: 0;
+            --base: #ffc760;
+        }
+
+
+        body {
+            text-align: center;
+            background: #193549;
+            color: white;
+            font-family: 'helvetica neue', sans-serif;
+            font-weight: 100;
+            font-size: 50px;
+        }
+
+        .controls {
+            margin-bottom: 50px;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        img {
+            width: 800px;
+            height: 500px;
+            padding: var(--spacing);
+            filter: blur(var(--blur)) grayscale(var(--grayscale)) sepia(var(--sepia));
+            background: var(--base);
+        }
+
+        .hl {
+            color: var(--base);
+        }
+    </style>
+
+    <script>
+
+        const inputs = document.querySelectorAll('.controls input');
+
+        function handleUpdate() {
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        }
+
+        inputs.forEach(input => input.addEventListener('input', handleUpdate));
+
+    </script>
+
+</body>
+
+</html>
