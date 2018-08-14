@@ -1,0 +1,110 @@
+html {
+    box-sizing: border-box;
+    background: #000000;
+    font-family: 'helvetica neue';
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.panel {
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    height: 720px;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition: flex 0.7s,
+    background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.5;
+
+}
+
+
+.panel1 {
+    background-image: url("p5/Joker.jpg");
+}
+
+.panel2 {
+    background-image: url("p5/Panther.jpg");
+}
+
+.panel3 {
+    background-image: url("p5/Navi.jpg");
+}
+
+.panel4 {
+    background-image: url("p5/Mona.jpg");
+}
+
+.panel5 {
+    background-image: url("p5/Fox.jpg");
+}
+
+.panel6 {
+    background-image: url("p5/Queen.jpg");
+}
+
+.panel7 {
+    background-image: url("p5/Noir.jpg");
+}
+
+.panel8 {
+    background-image: url("p5/Skull.jpg");
+}
+
+.panel>* {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel>*:last-child {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.panel.open-active>*:last-child {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 4em;
+}
+
+.panel.open {
+    flex: 10;
+    opacity: 1;
+}

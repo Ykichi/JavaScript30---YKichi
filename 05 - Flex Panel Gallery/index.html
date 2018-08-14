@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Panels</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="panels">
+        <div class="panel panel1">
+            <p></p>
+            <p></p>
+            <p>Joker</p>
+        </div>
+        <div class="panel panel2">
+            <p></p>
+            <p></p>
+            <p>Panther</p>
+        </div>
+        <div class="panel panel3">
+            <p></p>
+            <p></p>
+            <p>Navi</p>
+        </div>
+        <div class="panel panel4">
+            <p></p>
+            <p></p>
+            <p>Mona</p>
+        </div>
+        <div class="panel panel5">
+            <p></p>
+            <p></p>
+            <p>Fox</p>
+        </div>
+        <div class="panel panel6">
+            <p></p>
+            <p></p>
+            <p>Queen</p>
+        </div>
+        <div class="panel panel7">
+            <p></p>
+            <p></p>
+            <p>Noir</p>
+        </div>
+        <div class="panel panel8">
+            <p></p>
+            <p></p>
+            <p>Skull</p>
+        </div>
+    </div>
+
+    <script>
+        const panels = document.querySelectorAll('.panel');
+        let lastClickPanel = document.querySelector('.panel');
+
+        function toggleOpen() {
+            console.log(lastClickPanel);
+            if (this !== lastClickPanel) {
+                lastClickPanel.classList.remove('open');
+                lastClickPanel = this;
+            }
+            this.classList.toggle('open');
+        }
+
+        function toggleActive(e) {
+            if (e.propertyName.includes('flex')) {
+                this.classList.toggle('open-active');
+            }
+        }
+
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+    </script>
+
+
+
+</body>
+
+</html>
