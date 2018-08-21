@@ -18,3 +18,4 @@
  6 | [Type Ahead](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/06%20-%20Type%20Ahead) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/06%20-%20Type%20Ahead/)
  7 | [Array Cardio Day 2](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/07%20-%20Array%20Cardio%20Day%202) |
  8 | [Fun with HTML5 Canvas](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/08%20-%20Fun%20with%20HTML5%20Canvas/)
+ 9 | [Dev Tools Domination](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/09%20-%20Dev%20Tools%20Domination) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/09%20-%20Dev%20Tools%20Domination/)

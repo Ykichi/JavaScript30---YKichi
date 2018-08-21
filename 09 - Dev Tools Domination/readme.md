@@ -1,4 +1,4 @@
-# Dev Tools Domination
+# [Dev Tools Domination](https://ykichi.github.io/JavaScript30---YKichi/09%20-%20Dev%20Tools%20Domination/)
 ### 在頁面標籤加上中斷點
 F12 開發人員工具中，在 Elements 頁面的某個標籤，右键 → Break on → Attributes modifications。  
 便可在該元素上設置中斷點，當它的屬性發生改變時，會定位到程式碼中的對應行。
