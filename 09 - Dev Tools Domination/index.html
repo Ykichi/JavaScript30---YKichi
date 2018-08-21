@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Console Tricks!</title>
+</head>
+
+<body>
+
+    <p onClick="makeGreen()">×點×我×看x看x</p>
+
+    <script>
+        function makeGreen() {
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '50px';
+        }
+
+        //字串替換
+        console.log('%s', '我很和善');
+
+        //設定輸出樣式
+        console.log('變魔術給你看唷 %c (∩^o^)⊃━☆ﾟ.*･｡', 'color:#F7D13A; font-size:4em');
+
+        //warn
+        console.warn('警告你喔 ヽ(`Д´)ノ');
+
+        //error
+        console.error('報錯報錯 ◢▆▅▄▃崩╰(〒皿〒)╯潰▃▄▅▇◣');
+
+        //assert
+        const kichi = '很和善'
+        console.assert(kichi === '很和善', '這就不用說了');
+        console.assert(kichi === '不和善', '不不，這其中一定有什麼誤會');
+
+        //輸出DOM元素
+        const p = document.querySelector('p');
+        console.log(p);
+        console.dir(p);
+
+        //用group分組輸出
+        const dogs = [{ name: 'Snickers', age: 2, comment: '很聰明' }, { name: 'hugo', age: 8, comment: '超笨' }];
+        dogs.forEach(dog => {
+            //console.group(dog.name);
+            console.groupCollapsed(dog.name); //未展開
+            console.log(`這隻狗叫做 ${dog.name}`);
+            console.log(`這隻狗${dog.age}歲`);
+            console.log(`這隻狗${dog.comment}`);
+            console.groupEnd(dog.name);
+        });
+
+        //計次
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻和善');
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻和善');
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻和善');
+        console.count('有幾隻和善');
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻和善');
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻冬冬');
+        console.count('有幾隻和善');
+        console.count('有幾隻冬冬');
+
+        //計時
+        console.time('fetch time');
+        fetch("https://api.github.com/users/ykichi")
+            .then(data => data.json())
+            .then(data => {
+                console.timeEnd('fetch time');
+                console.log(data);
+            });
+
+    </script>
+</body>
+
+</html>

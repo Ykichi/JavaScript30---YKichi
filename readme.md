@@ -1,4 +1,4 @@
-## Javascipt30
+# Javascipt30
 是工程師WES BOS製作的一系列純javascript練習，  
 共有30個主題，每個主題有一個教學影片及範例檔案。  
 >[WES BOS的GitHub](https://github.com/wesbos/JavaScript30)  
