@@ -1,4 +1,4 @@
-# [Custom Video Player](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/11%20-%20Custom%20Video%20Player)
+# [Custom Video Player](https://ykichi.github.io/JavaScript30---YKichi/11%20-%20Custom%20Video%20Player/)
 + [HTML DOM Video Object](https://www.w3schools.com/tags/ref_av_dom.asp)
 + [`timeupdate`](https://developer.mozilla.org/zh-CN/docs/Web/Events/timeupdate) 事件
 + 這一段控制播放鍵的部分
