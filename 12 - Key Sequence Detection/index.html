@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Key Detection</title>
+    <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            writing-mode: vertical-lr;
+            font-size: 55px;
+            font-weight: bold;
+            font-family: "FangSong";
+            color: maroon;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>在這個頁面上輸入「ㄎ一ㄤ」</p>
+
+    <script>
+        let pressed = [];
+        const secret = 'du;';
+
+        function keyDetection(e) {
+            pressed.push(e.key);
+            console.log(pressed);
+
+            //從一開始輸入的內容開始刪除來控制陣列長度
+            pressed.splice(-secret.length - 1, pressed.length - secret.length);
+
+            //比對陣列的內容與secret
+            if (pressed.join('').includes(secret)) {
+                cornify_add();
+            }
+        }
+        window.addEventListener('keyup', keyDetection)
+    </script>
+</body>
+
+</html>
