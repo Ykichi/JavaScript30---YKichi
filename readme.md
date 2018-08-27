@@ -24,3 +24,4 @@
  12 | [Key Sequence Detection](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/12%20-%20Key%20Sequence%20Detection) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/12%20-%20Key%20Sequence%20Detection/)
  13 | [Slide in on Scroll](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/13%20-%20Slide%20in%20on%20Scroll) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/13%20-%20Slide%20in%20on%20Scroll/)
  14 | [JavaScript Referencex VS Copying](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/14%20-%20JavaScript%20References%20VS%20Copying) |
+ 15 | [LocalStorage](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/15%20-%20LocalStorage) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/15%20-%20LocalStorage/)
