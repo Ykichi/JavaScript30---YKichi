@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Shadow</title>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1 contenteditable>滑鼠座標控制陰影!</h1>
+    </div>
+
+    <style>
+        html {
+            color: black;
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        h1 {
+            text-shadow: 10px 10px 0 rgba(0, 0, 0, 1);
+            font-size: 100px;
+            font-family: 'FangSong';
+            ;
+        }
+    </style>
+
+    <script>
+        const hero = document.querySelector('.hero');
+        const text = hero.querySelector('h1');
+        //偏移量(正負50)
+        const walk = 100;
+
+        function shadow(e) {
+            //頁面寬 高
+            const { offsetWidth: width, offsetHeight: height } = hero;
+            //目標(e)座標
+            let { offsetX: x, offsetY: y } = e;
+            //目標改變時修正座標
+            if (this !== e.target) {
+                x += e.target.offsetLeft;
+                y += e.target.offsetTop;
+            }
+            //用目標座標、頁面的寬、高換算成陰影偏移値
+            let xWalk = Math.round((x / width * walk) - walk / 2);
+            let yWalk = Math.round((y / height * walk) - walk / 2);
+            console.log(xWalk, yWalk);
+            text.style.textShadow = `
+            ${xWalk}px ${yWalk}px 0 rgba(255,0,0,0.7),
+            ${xWalk * -1}px ${yWalk * -1}px 0 rgba(0,0,255,0.7)
+            `
+
+        }
+
+        hero.addEventListener('mousemove', shadow);
+    </script>
+</body>
+
+</html>
