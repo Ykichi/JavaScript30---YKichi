@@ -27,3 +27,4 @@
  15 | [LocalStorage](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/15%20-%20LocalStorage) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/15%20-%20LocalStorage/)
  16 | [Mouse Move Shadow](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/16%20-%20Mouse%20Move%20Shadow) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/16%20-%20Mouse%20Move%20Shadow/)
  17| [Sort Withoust Articles](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/17%20-%20Sort%20Without%20Articles) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/17%20-%20Sort%20Without%20Articles/)
+18 | [Adding Up Timers with Reduce](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/18%20-%20Adding%20Up%20Times%20with%20Reduce) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/18%20-%20Adding%20Up%20Times%20with%20Reduce/)
