@@ -32,3 +32,4 @@
 20 | |
 21 | |
 22 | [Follow Along Link Highlighter](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/22%20-%20Follow%20Along%20Link%20Highlighter) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/22%20-%20Follow%20Along%20Link%20Highlighter/)
+23| [Speech Synthesis](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/23%20-%20Speech%20Synthesis) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/23%20-%20Speech%20Synthesis/)

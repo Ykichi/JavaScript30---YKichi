@@ -1,0 +1,5 @@
+# [Speech Synthesis](https://ykichi.github.io/JavaScript30---YKichi/23%20-%20Speech%20Synthesis/)
++ [SpeechSynthesisUtterance](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) 用來設定語音服務的細節(語系、語速、音調等屬性)
++ [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) 執行語音服務的主要功能(播放、暫停等屬性)
++  CSS [calc](https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc)
++ CSS [`radial-gradient()`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient)

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Synthesis</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="voiceinator">
+
+        <h1>The Voiceinator 5000</h1>
+
+        <select name="voice" id="voices">
+            <option value="">Select A Voice</option>
+        </select>
+
+        <label for="rate">語速：</label>
+        <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+
+        <label for="pitch">音調：</label>
+
+        <input name="pitch" type="range" min="0" max="2" step="0.1">
+        <textarea name="text">在這裡輸入想聽的內容</textarea>
+        <button id="stop">停止</button>
+        <button id="speak">說話</button>
+
+    </div>
+
+    <script>
+        const msg = new SpeechSynthesisUtterance();
+        let voices = [];
+        const voicesDropdown = document.querySelector('[name="voice"]');
+        const options = document.querySelectorAll('[type="range"], [name="text"]');
+        const speakButton = document.querySelector('#speak');
+        const stopButton = document.querySelector('#stop');
+        msg.text = document.querySelector('[name="text"]').value;
+
+        //取得語系資訊
+        function populateVoice() {
+            voices = this.getVoices();
+            //將語系資訊放入下拉式選單
+            voicesDropdown.innerHTML = `<option value="Google 國語（臺灣）">選擇聲音(預設 zh-TW)</option>` +
+                voices.map(voice => {
+                    return `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`
+                }).join('');
+        }
+
+        //設定選擇的語系
+        function setVoice() {
+            msg.voice = voices.find(voice => voice.name === this.value);
+        }
+
+        function toggle(restart = true) {
+            speechSynthesis.cancel();
+            if (restart) {
+                speechSynthesis.speak(msg);
+            }
+
+        }
+
+        //設定語速、音調
+        function setOptions() {
+            console.log(this.name, this.value);
+            msg[this.name] = this.value;
+        }
+
+        //語系清單更新
+        speechSynthesis.addEventListener('voiceschanged', populateVoice);
+
+        voicesDropdown.addEventListener('change', setVoice);
+
+        //語速、音調的控制條監控
+        options.forEach(option => option.addEventListener('change', setOptions));
+
+        speakButton.addEventListener('click', toggle);
+        stopButton.addEventListener('click', () => toggle(false));
+
+    </script>
+
+</body>
+
+</html>
