@@ -36,3 +36,4 @@
 24 | Sticky Nav |[頁面](https://ykichi.github.io/JavaScript30---YKichi/24%20-%20Sticky%20Nav/)
 25 | [Event Capture, Propagation, Bubbling and Once](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once) |
 26 | [Stirpe Follow Along Nav](https://github.com/Ykichi/JavaScript30---YKichi/tree/master/26%20-%20Stripe%20Follow%20Along%20Nav) |[頁面](https://ykichi.github.io/JavaScript30---YKichi/26%20-%20Stripe%20Follow%20Along%20Nav/)
+27 | Click and Drag |[頁面](https://ykichi.github.io/JavaScript30---YKichi/27%20-%20Click%20and%20Drag/)
