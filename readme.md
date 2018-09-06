@@ -1,5 +1,5 @@
 # Javascipt30
-是工程師WES BOS製作的一系列純 JavaScript 練習，  
+是工程師 WES BOS 製作的一系列純 JavaScript 練習，  
 共有30個主題，每個主題有一個教學影片及範例檔案。  
 >[WES BOS 的GitHub](https://github.com/wesbos/JavaScript30)  
 [JavaScript30 官網](https://javascript30.com/)
